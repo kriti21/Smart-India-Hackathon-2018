@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if form.errors %}
+	<p>Invalid username or password</p>
+{% endif %}
+
+<div class="container" style="width: 50%; height: 70%;">
+<div class="jumbotron">
+  	<h1 class="display-5">Login</h1>
+  	<form action="" method="post">
+  		{% csrf_token %}
+    	{{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+</div>
+{% endblock %}
